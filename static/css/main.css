@@ -1,5 +1,5 @@
 body{
-    background-color: bisque(0, 0%, 98%);
+    background-color: bisque;
 }
 
 
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 0;
 }
 
-.row-image{
+.roww-imagee{
 	width: 100px;
 }
 
@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,h6{
 	padding: 5px;
 }
 
-.cart-row{
+.carty-roww{
 	display: flex;
     align-items: flex-stretch;
     padding-bottom: 10px;
@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-.quantity{
+.quantityy{
 	display: inline-block;
 	font-weight: 700;
 	padding-right:10px;
@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-.chg-quantity{
+.chg-quantityy{
 	width: 12px;
 	cursor: pointer;
 	display: block;
@@ -90,7 +90,7 @@ h1,h2,h3,h4,h5,h6{
 	transition:.1s;
 }
 
-.chg-quantity:hover{
+.chg-quantityy:hover{
 	opacity: .6;
 }
 
