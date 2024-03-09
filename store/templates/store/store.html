@@ -4,116 +4,20 @@
 {% block content %}
     
     <div class="row">
-
+        {% for product in products %}
         <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag1.jpg' %}">
+            <img class="arrangingpic" src="{{product.imageURL}}">
             <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
+                <h6><strong>{{product.name}}</strong></h6>
                 <hr>
 
                 <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
                 <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
+                <h4 style="display: inline-block; float: right"><strong>=N={{product.price|floatformat:2}}</strong></h4>
 
             </div>
         </div>
 
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag2.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Vendor A's Product</strong></h6>
-                <hr>
-
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-
-            </div>
-        </div>
-
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag3.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
-                <hr>
-
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag4.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
-                <hr>
-                
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-                
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag5.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
-                <hr>
-
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-
-            </div>
-        </div>
-
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag6.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
-                <hr>
-
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-
-            </div>
-        </div>
-
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag7.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
-                <hr>
-
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-
-            </div>
-        </div>
-
-
-        <div class="col-lg-4">
-            <img class="arrangingpic" src="{% static 'images/bag8.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Vendor A's Product</strong></h6>
-                <hr>
-
-                <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right"><strong>=N= 4000</strong></h4>
-
-            </div>
-        </div>
-
-    
+        {% endfor %}
     </div>
 {% endblock content %}
