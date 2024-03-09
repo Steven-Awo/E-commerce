@@ -13,8 +13,8 @@
                         <br>
                         <table class="table">
                                 <tr>
-                                        <th><h5>ITEMS:  <strong>3</strong></h5></th>
-                                        <th><h5>TOTAL:  <strong>=N=12000</strong></h5></th>
+                                        <th><h5>ITEMS:  <strong>{{order.get_cart_items}}</strong></h5></th>
+                                        <th><h5>TOTAL:  <strong>N{{order.get_cart_total|floatformat:"2"}}</strong></h5></th>
                                         <th>
                                         <a style="float:right:margin:5px" class="btn btn-success" href="{% url 'checkout' %}" >Checkout</a>
                                         </th>
@@ -47,7 +47,7 @@
                                                 <img class="chg-quantityy" src="{% static  'images/arrow-down.png' %}">
                                         </div>
                                 </div>
-                                <div style="flex:1">N 8000.00</div>
+                                <div style="flex:1">N{{item.get_total|floatformat:"2"}}</div>
 
                                 
                         </div>
