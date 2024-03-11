@@ -42,9 +42,9 @@
                                 <div style="flex:1">
                                         <p class="quantityy">{{item.quantity}}</p>
                                         <div class="quantityy">
-                                                <img class="chg-quantityy" src="{% static  'images/arrow-up.png' %}">
+                                                <img data-product="{{item.product.id}}" data-action="add" class="chg-quantityy update-cart" src="{% static  'images/arrow-up.png' %}">
                                 
-                                                <img class="chg-quantityy" src="{% static  'images/arrow-down.png' %}">
+                                                <img data-product="{{item.product.id}}" data-action="remove" class="chg-quantityy update-cart" src="{% static  'images/arrow-down.png' %}">
                                         </div>
                                 </div>
                                 <div style="flex:1">N{{item.get_total|floatformat:"2"}}</div>

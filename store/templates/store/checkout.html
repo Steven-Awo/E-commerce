@@ -58,17 +58,26 @@
                         <h3>Order Summary</h3>
 
                         <hr>
-
+                        {% for item in items%}
                         <div class="carty-roww">
-                                <div style="flex:2"><img class="roww-imagee" src="{% static 'images/bag11.jpg' %}"></div>
-                                <div style="flex:2">Product 1</div>
-                                <div style="flex:1">N4000.00</div>
-                                <div style="flex:1"><p>x2</p></div>                                
+                                <div style="flex:2"><img class="roww-imagee" src="{{item.product.imageURL}}"></div>
+                                <div style="flex:2">{{item.product.name}}</div>
+                                <div style="flex:1">N{{item.product.price}}</div>
+                                <div style="flex:1"><p>x{{item.quantity}}</p></div>                                
                         </div>
-                        <h5>ITEMS:    2</h5>
-                        <h5>TOTAL:    N8000.00</h5>
+                        {% endfor %}
+                        <h5>ITEMS:    {{order.get_cart_items}}</h5>
+                        <h5>TOTAL:    N{{order.get_cart_total|floatformat:"2"}}</h5>
                 </div>
         </div>
 </div>
+
+<script type="text/javascript">
+        var shipping = '{{order.shipping}}'
+
+        if (shipping == 'False'){
+                document.getElementById('shipping-info').innerHTML = ''
+        }
+</script>
 
 {% endblock content %}
