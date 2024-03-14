@@ -8,6 +8,14 @@
     justify-content: center;
 }
 
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 40px;
+}
+
 .box {
     width: 200px; /* Adjust width as needed */
     margin: 0 10px; /* Add spacing between boxes */
@@ -15,10 +23,10 @@
 }
 
 .box img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
+    display: block;/* Center the image horizontally */
+    margin-right: 20px; 
 }
 
 
