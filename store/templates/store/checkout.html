@@ -8,6 +8,7 @@
         <div class="col-lg-6">
                 <div class="boxx-elementt" id="form-wrapper">
                         <form id="form">
+                                {% csrf_token %}
                                 <div id="user-info">
                                         <div class="form-field">
                                                 <input required class="form-control" type="text" name="name" placeholder="Name..">
@@ -75,7 +76,7 @@
 
 <script type="text/javascript">
         var shipping = '{{order.shipping}}'
-        var total = '{{order.get_cart_total|floatformat:2}}'
+        var total = '{{order.get_cart_total}}'
 
         if (shipping == 'False'){
                 document.getElementById('shipping-info').innerHTML = ''
@@ -93,12 +94,16 @@
        }
 
         var form = document.getElementById('form')
-		form.addEventListener('submit', function(e){
+
+        csrftoken = form.getElementsByTagName("input")[0].value
+        console.log('Newtoken:', form.getElementsByTagName("input")[0].value)
+
+	form.addEventListener('submit', function(e){
 	    	e.preventDefault()
 	    	console.log('Form Submitted...')
 	    	document.getElementById('form-button').classList.add("hidden");
 	    	document.getElementById('payment-info').classList.remove("hidden");
-	    })
+	})
         document.getElementById('make-payment').addEventListener('click', function(e){
                 submitFormData()
         })
