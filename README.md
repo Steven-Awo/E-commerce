@@ -1,141 +1,61 @@
-username-Garden
-password- root1234
+Garden of Edenn
 
-<!DOCTYPE html>
-<html>
-    
-<head>
-	<title>Login</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+Introduction
 
-	<style>
-		body,
-		html {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			background: #7abecc !important;
-		}
-		.user_card {
-			width: 350px;
-			margin-top: auto;
-			margin-bottom: auto;
-			background: #74cfbf;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+Welcome to the Garden of Edenn, an e-commerce website designed to facilitate vendors in showcasing their products to customers within a specific area. Garden of Edenn provides a platform where vendors can display their products and customers can easily browse, purchase, and review them. This README provides comprehensive information about the project, including installation instructions, usage guidelines, contribution guidelines, related projects, and licensing details.
 
-		}
+Tools and libraries instaledl or used to carryout this project
+Python3.11.5, Django, git, vscode, github
 
-		.form_container {
-			margin-top: 20px;
-		}
-
-		#form-title{
-			color: #fff;
-		}
-		.login_btn {
-			width: 100%;
-			background: #33ccff !important;
-			color: white !important;
-		}
-		.login_btn:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.login_container {
-			padding: 0 2rem;
-		}
-		.input-group-text {
-			background: #f7ba5b !important;
-			color: white !important;
-			border: 0 !important;
-			border-radius: 0.25rem 0 0 0.25rem !important;
-		}
-		.input_user,
-		.input_pass:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-
-	</style>
-
-</head>
-<body>
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
-				<div class="d-flex justify-content-center">
-					<h3 id="form-title">REGISTER ACCOUNT</h3>
-				</div>
-				<div class="d-flex justify-content-center form_container">
-
-					<form method="POST" action="">
-                        {% csrf_token %}
-                        {{form.as_p}}
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							{{form.username}}
-						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
-							</div>
-							{{form.email}}
-						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							{{form.password1}}
-						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							{{form.password2}}
-						</div>
-
-				   		<div class="d-flex justify-content-center mt-3 login_container">
-				 			<input class="btn login_btn" type="submit" value="Register Account">
-				   		</div>
-					</form>
-				</div>
-		
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-						/* Because i didnt set placeholder values in forms.py they will be set here using vanilla Javascript
-		//We start indexing at one because CSRF_token is considered and input field 
-		 */
-
-		//Query All input fields
-		var form_fields = document.getElementsByTagName('input')
-		form_fields[1].placeholder='Username..';
-		form_fields[2].placeholder='Email..';
-		form_fields[3].placeholder='Enter password...';
-		form_fields[4].placeholder='Re-enter Password...';
+Libraries
+Asgiref, django-ckeditor, django-ckeditor-5, django-crispy-forms, Django-debug-toolbar, django-dotenv, django-environ, django-js-asset, django-social-share, django-static-fontawesome, django-taggit, gunicorn
+Whitenoise, packaging, pillow, sqlparse, tzdata
 
 
-		for (var field in form_fields){	
-			form_fields[field].className += ' form-control'
-		}
-	</script>
-</body>
-</html>
+Installations
+
+
+To run the Garden of Edenn e-commerce website locally, follow these steps:
+
+
+Make sure you have Python 3.11.5 installed on your system. If not, you can download and install it from the official Python website.
+
+Clone the GitHub repository of the project:
+
+bash
+Copy code
+git clone https://github.com/yourusername/ecommerce-garden-of-edenn.git
+Replace yourusername with your GitHub username.
+
+Navigate to the project directory:
+
+bash
+Copy code
+cd ecommerce-garden-of-edenn
+Install the required dependencies using pip:
+
+Copy code
+pip install -r requirements.txt
+This will install Django and all the necessary libraries mentioned above.
+
+Usage
+
+The Garden of Edenn e-commerce website is designed for vendors to showcase their products to customers who need those products. Vendors can sign up, add their products, set prices, and manage orders. Customers can browse products, add them to their cart, place orders, and leave reviews.
+
+Contributing
+
+We welcome contributions from the community to improve the Garden of Edenn project. If you'd like to contribute, please follow these guidelines:
+
+Fork the repository.
+Create your feature branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -am 'Add some feature').
+Push to the branch (git push origin feature/your-feature).
+Create a new Pull Request.
+
+Related Projects
+Amazon
+Shopify
+Dropshipping
+Licensing
+
+The Garden of Edenn project is licensed under the

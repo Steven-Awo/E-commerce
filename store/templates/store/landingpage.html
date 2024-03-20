@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <title>Webpage Design</title>
-    <link rel="stylesheet" type="text/css" href="{%static 'css/land.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/land.css' %}">
 
 </head>
 <body>
@@ -19,8 +19,6 @@
                     <li><a href="#">HOME</a></li>
                     <li><a href="{% url 'store' %}">STORE</a></li>
                     <li><a href="{% url 'about' %}">ABOUT</a></li>
-                    <li><a href="{% url 'cart' %}">CART</a></li>
-                    <li><a href="{% url 'checkout' %}">CART</a></li>
                 </ul>
             </div>
         </div> 
