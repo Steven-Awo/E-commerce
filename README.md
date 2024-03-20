@@ -14,7 +14,7 @@ Whitenoise, packaging, pillow, sqlparse, tzdata
 
 
 Installations
-https://drive.google.com/file/d/1TIa5nGN-z90kUsyunfktcnT4iBOVcvXR/view?usp=sharing
+![req](https://github.com/Steven-Awo/E-commerce/assets/83477902/0aaa7c5a-b70c-4812-b4fe-d9f19dd18872)
 
 To run the Garden of Edenn e-commerce website locally, follow these steps:
 
